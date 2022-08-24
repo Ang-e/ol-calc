@@ -1,0 +1,62 @@
+.panel-title {
+  position: relative;
+  padding: 12px 0 12px 32px;
+  color: #6a6a77;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.5;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: .512rem;
+    top: 50%;
+    margin-top: -.42667rem;
+    width: 2PX;
+    height: .85333rem;
+    background-color: #6190e8;
+    box-shadow: 0 0.14933rem 0.256rem 0 rgb(97 144 232 / 20%);
+    border-radius: 1PX;
+  }
+}
+
+.check-box-dis-count {
+  display: flex;
+
+  &::before {
+    display: none;
+  }
+
+  .at-checkbox__option-wrap {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.radio-cate {
+  &::before {
+    display: none;
+  }
+
+  .at-radio__option {
+    padding-right: 32px;
+  }
+}
+
+.calc-result-amount {
+  .at-input__container {
+    input {
+      font-weight: 700;
+      color: #e60012;
+    }
+  }
+}
+
+.at-input {
+  .weui-input {
+    height: 100%;
+    font-size: 100%;
+  }
+}
