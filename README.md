@@ -1,37 +1,53 @@
 # ol-calc
 
 #### 介绍
-OL算价
+:triangular_ruler: OL算价
 
 #### 软件架构
-软件架构说明
 
+:gift: `Taro` 打包生成`微信小程序` 和 `H5` 页面
 
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+:link: 页面地址: https://ang-e.github.io/ol-calc/dist
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+**1.  可配置项：**
 
-#### 参与贡献
+- :department_store: 折扣
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+  | 参数 \ 折扣 | OL双折 | 9折  | 82折 |
+  | :---------- | :----- | :--- | :--- |
+  | 折扣因数    | 1      | 0.9  | 0.82 |
+ 
+- :closed_book: 大类
 
+  | 参数 \ 大类 | 轻物 | 重物 |
+  | :---------- | :--- | :--- |
+  | 原币加数    | 0    | 0    |
+  | 尾加数      | 200  | 300  |
+  
+- :orange_book: 小类
 
-#### 特技
+  | 参数\大类 | 单品 | 轻衣 | 轻鞋 | 重衣 |
+  | :-------- | :--- | :--- | :--- | :--- |
+  | 原币加数  | 10   | 15   | 20   | 25   |
+  | 尾加数    | 200  | 200  | 200  | 300  |
+  
+- :bank: 汇率
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+  | 参数 \ 原价范围 | [ 0, 100 ) | [ 100, +∞ ) |
+  | :-------------- | :--------- | :---------- |
+  | 汇率因数        | 10         | 7.3 × 1.2   |
+  
+**2. 计算公式**
+
+- :family: 总折扣
+  已选折扣类型折扣因数的累乘
+  
+  *例如同时勾选OL双折、9折、82折，则总折扣为1 × 0.9 × 0.82*
+  
+- :eyes: 真实价格
+  ( 原价 × 总折扣 + 原币加数 ) × 汇率 + 尾加数 
+
